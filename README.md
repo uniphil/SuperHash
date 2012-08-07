@@ -1,0 +1,4 @@
+SuperHash
+=========
+
+Hash Anything
