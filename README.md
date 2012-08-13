@@ -3,7 +3,7 @@ SuperHash
 
 Hash anything.
 
-```python
+```pycon
 >>> from superhash import superhash
 >>> superhash({'look':'I','m':'hashing','a':'dictionary!'})
 6096922376629631909
