@@ -1,14 +1,18 @@
 """hash anything"""
 
 def superhash(anything):
+    """takes anything. returns a hash of the anything."""
+    
     xhash = 0
 
     try:
+        # does it have attributes we should take into account?
         xhash ^= superhash(anything.__dict__)
     except AttributeError:
         pass
 
     try:
+        # can python hash it already?
         xhash ^= hash(anything)
     except TypeError:
         try:
