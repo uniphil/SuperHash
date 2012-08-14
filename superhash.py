@@ -19,10 +19,10 @@ hash anything.
 
 >>> from superhash import hashable
 >>> @hashable
-... class HashWrapped(dict): pass
+... class HashDecorated(dict): pass
 ... 
 >>> hash(HashDecorated)
-1760438
+2503861
 >>> hash(HashDecorated({1:2}))
 3713081631934410656
 

@@ -59,6 +59,7 @@ class TestHasher(unittest.TestCase):
 	def testObject(self):
 		class cls(object): pass
 		inst1, inst2 = cls(), cls()
+		self.assertEqual(sh.superhash(inst1), sh.superhash(inst2))
 		inst1.x = 1
 		self.assertHash(inst1, inst2)
 
