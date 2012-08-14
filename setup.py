@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
 	name='SuperHash',
-    version='0.1.2',
+    version='0.2b1',
     author='Philip Schleihauf',
     author_email='uniphil@gmail.com',
     license='GPLv3',
