@@ -18,3 +18,35 @@ Hash anything.
 >>> superhash(foo)
 -3828842421826240771
 ```
+
+```pycon
+>>> from superhash import hashable
+>>> @hashable
+... class HashWrapped(dict): pass
+... 
+>>> hash(HashDecorated)
+1760438
+>>> hash(HashDecorated({1:2}))
+3713081631934410656
+```
+
+```pycon
+>>> from superhash import hashable
+>>> class HashableDict(hashable(dict)): pass
+... 
+>>> hash(HashableDict)
+2533830
+>>> hd = HashableDict({1:2})
+>>> hash(hd)
+3713081631934410656
+>>> hd.update({1:3})
+>>> hash(hd)
+3713081631933328131
+```
+
+```pycon
+>>> from superhash import hashable
+>>> inline = hashable(dict)({1:2})
+>>> hash(inline)
+3713081631934410656
+```
