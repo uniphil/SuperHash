@@ -1,7 +1,7 @@
 SuperHash
 =========
 
-Hash anything. Make everything hashable.
+Hash anything.
 
 ```pycon
 >>> from superhash import superhash
@@ -18,6 +18,9 @@ Hash anything. Make everything hashable.
 >>> superhash(foo)
 -3828842421826240771
 ```
+
+Make anything hashable.
+
 
 ```pycon
 >>> from superhash import hashable
