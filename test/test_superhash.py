@@ -82,6 +82,17 @@ class TestHasher(unittest.TestCase):
 		fn1 = lambda: 1
 		fn2 = lambda: 2
 		self.assertHash(fn1, fn2)
+		
+	def testLambda(self):
+		f1 = lambda x: x + 1
+		f2 = lambda x: x + 1
+		
+		f3 = lambda x: x + 2
+
+		self.assertHash(f1, f3)
+		self.assertHash(f2, f3)
+		
+		self.assertEqual(sh.superhash(f1), sh.superhash(f2))
 
 	def testNestedDict(self):
 		self.assertHash({1:{1:1}}, {1:{1:2}})

@@ -56,7 +56,20 @@ def superhash(anything, try_anyway=True):
         xhash ^= superhash(anything.__dict__)
     except AttributeError:
         pass
-
+    
+    # is it functional?
+    try:
+        xhash ^= superhash(anything.func_code)  # Python 2.x (for x >= 6 at least)
+        return hash(xhash)
+    except AttributeError:
+        try:
+            xhash ^= superhash(anything.__code__)   # Python 3
+            return hash(xhash)
+        except AttributeError:
+            pass
+    except AttributeError:
+        pass
+    
     try:
         if try_anyway:
             # can python hash it already?
