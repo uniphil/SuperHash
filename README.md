@@ -53,3 +53,10 @@ Make anything hashable.
 >>> hash(inline)
 3713081631934410656
 ```
+
+Make breakfast.
+
+```pycon
+>>> from superhash import superhash
+>>> breakfast = superhash('browns')
+```
