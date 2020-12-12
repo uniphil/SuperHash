@@ -1,3 +1,15 @@
+⚠️ Do not use ⚠️
+----------------
+
+I really didn't know what I was doing when I wrote this, and, as mentioned in the issues which have been open for _ages_, the hashing strategy is really weak and certain kinds of collisions are trivial.
+
+This worked ok on the project I originally created it for, where I needed a unique-but-deterministic filename to store computation results based off of arbitrary combinations of inputs. But even there, it would have been easy to structure things in ways that caused collisions.
+
+While fixing it should be possible (and maybe not even that hard), it's not something I have the bandwidth for right now.
+
+Hopefully it goes without saying, but nothing in here was ever even remotely close to being suitable for cryptographic purposes 🙀.
+
+
 SuperHash
 =========
 
